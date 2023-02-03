@@ -1,0 +1,28 @@
+.main-nav {
+    display: none;
+    flex-grow: 1;
+}
+
+.main-nav__links {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    justify-content: space-evenly;
+}
+
+.main-nav__link a {
+    text-decoration: none;
+    color: #504746;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+@media (min-width: 769px) {
+    .main-nav {
+        display: block;
+    }
+}
