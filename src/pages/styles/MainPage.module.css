@@ -1,0 +1,21 @@
+/* .main-page {
+     max-width: 100vw;
+} */
+
+.main-page__header {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1.5rem;
+    color: #B6244F;
+}
+
+@media (min-width: 769px) {
+    .main-page__header {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .main-page__header {
+        font-size: 2.5rem;
+    }
+}

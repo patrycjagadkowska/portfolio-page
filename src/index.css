@@ -2,12 +2,9 @@
   box-sizing: border-box;
 }
 
-html {
-  height: 100%;
-}
-
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
-  height: 100%;
+  background: #BFADA3;
+  margin-bottom: 11.5rem;
 }

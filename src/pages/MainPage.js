@@ -1,7 +1,11 @@
+import classes from './styles/MainPage.module.css';
+
 const MainPage = () => {
     return (
-        <div>
-            <h1>This is MainPage</h1>
+        <div className={classes['main-page']}>
+            <div className={classes['main-page__header']}>
+                <h1>Hi!<br/>I'm Patrycja<br/>and I'm React Frontend Developer</h1>
+            </div>
         </div>
     );
 };
