@@ -1,4 +1,4 @@
-import classes from './Main.module.css';
+import classes from './styles/Main.module.css';
 
 const Main = props => {
     return (
