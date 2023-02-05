@@ -1,17 +1,26 @@
-import { NavLink } from "react-router-dom"
+import { NavLink } from "react-router-dom";
+import { useState } from "react";
 
 import MainNav from "./MainNav";
+import MobileNav from "./MobileNav";
 
 import classes from './styles/Header.module.css';
 
 const Header = () => {
+    const [showNav, setShowNav] = useState(false);
+
+    const handleClick = () => {
+        setShowNav(!showNav);
+    };
+
     return (
         <header className={classes.header}>
             <div className={classes['header__home-link']}>
                 <NavLink to='/'>HOME</NavLink>
             </div>
             <MainNav />
-            <div className={classes['header__toggle-button']}>
+            {showNav && <MobileNav />}
+            <div className={classes['header__toggle-button']} onClick={handleClick}>
                 <span />
                 <span />
                 <span />
