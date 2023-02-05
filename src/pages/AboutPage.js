@@ -7,7 +7,7 @@ const AboutPage = () => {
     return (
         <div className={classes['about-page']}>
             <section className={classes['about-page__section--about']}>
-                <h2 className={classes['about-page__header']}>about me</h2>
+                <h1 className={classes['about-page__header']}>about me</h1>
                 My name is Patrycja Gadkowska and in the beginning of 2022 I decided to become Frontend 
                 Developer. A few months after I found React and I loved to learn it. Currently I am 
                 looking for my first job as React Frontend Developer.
