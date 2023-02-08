@@ -15,7 +15,7 @@ const Header = () => {
 
     return (
         <header className={classes.header}>
-            <div className={classes['header__home-link']}>
+            <div className={classes['header__home']}>
                 <NavLink to='/'>HOME</NavLink>
             </div>
             <MainNav />

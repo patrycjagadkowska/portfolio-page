@@ -3,7 +3,7 @@
     display: -webkit-flex;
     display: -moz-box;
     display: flex;
-    background: #FBB7C0;
+    background: #C36F09;
     padding: 1rem 1rem 0 1rem;
     flex-direction: column;
     align-items: center;
@@ -16,7 +16,7 @@
 
 .footer__copyright {
     padding: 0 0 1rem 0;
-    color: #B6244F;
+    color: #212738;
 }
 
 @media (min-width: 769px) {

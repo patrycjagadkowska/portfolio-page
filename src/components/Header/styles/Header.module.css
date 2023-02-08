@@ -3,15 +3,19 @@
     display: -moz-box;
     display: -webkit-flex;
     display: flex;
-    background: #B89685;
+    background: #212738;
     align-items: center;
-    padding: 1rem;
     justify-content: space-between;
+    border-bottom: 2px dotted #B6244F;
 }
 
-.header__home-link a {
+.header__home {
+    padding: 1rem;
+}
+
+.header__home a {
     text-decoration: none;
-    color: #504746;
+    color: #C36F09;
     font-size: 2rem;
     letter-spacing: 2px;
 }
@@ -26,11 +30,12 @@
     align-items: flex-end;
     width: 2.5rem;
     height: 2.5rem;
+    margin: 1rem;
 }
 
 .header__toggle-button span {
     height: 0.2rem;
-    background-color: #504746;
+    background-color: #C36F09;
     
 }
 
@@ -47,6 +52,10 @@
 }
 
 @media (min-width: 769px) {
+    .header__home {
+        border-right: 2px dotted #B6244F;
+    }
+
     .header__toggle-button {
         display: none;
     }

@@ -1,11 +1,7 @@
-/* .main-page {
-     max-width: 100vw;
-} */
-
 .main-page__header {
     font-family: 'League Spartan', sans-serif;
     font-size: 1.5rem;
-    color: #B6244F;
+    color: #FFF;
 }
 
 @media (min-width: 769px) {
