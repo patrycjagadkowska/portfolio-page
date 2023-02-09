@@ -1,5 +1,78 @@
+.mobile-nav {
+    position: absolute;
+    z-index: 11;
+    top: 0;
+    right: 0;
+    background-color: #212738;
+    width: 60%;
+    height: 100vh;
+    display: -moz-box;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .mobile-nav a {
     text-decoration: none;
-    color: #C36F09;
-    letter-spacing: 1px;
+    color: #B6244F;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    padding: 1rem;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+.mobile-nav a::before,
+.mobile-nav a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+}
+
+.mobile-nav a::before {
+    background-color: #B6244F;
+    height: 2px;
+    bottom: 0;
+    transform-origin: 100% 50%;
+    transform: scaleX(0);
+}
+
+.mobile-nav a::after {
+    content: attr(data-replace);
+    top: 0;
+    transform-origin: 100% 50%;
+    transform: translate3d(200%, 0, 0);
+    transition: 0.5s ease-in-out;
+}
+
+.mobile-nav a:hover::before,
+.mobile-nav a:active::before {
+    transform-origin: 0% 50%;
+    transform: scaleX(1);
+    transition: 0.5s ease-in-out;
+}
+
+.mobile-nav a:hover::after {
+    transform: translate3d(0, 0, 0);
+}
+
+.mobile-nav a span {
+    display: inline-block;
+    transition: transform 0.5s ease-in-out;
+}
+
+.mobile-nav a:hover span {
+    transform: translate3d(-200%, 0, 0);
+}
+
+@media (min-width: 769px) {
+    .mobile-nav {
+        display: none;
+    }
 }

@@ -5,9 +5,9 @@ import classes from './styles/MobileNav.module.css';
 const MobileNav = () => {
     return (
         <nav className={classes['mobile-nav']}>
-            <NavLink to='about'>about me</NavLink>
-            <NavLink to='portfolio'>portfolio</NavLink>
-            <NavLink to='contact'>contact</NavLink>
+            <NavLink to='about' data-replace='about me'><span>about me</span></NavLink>
+            <NavLink to='portfolio' data-replace='portfolio'><span>portfolio</span></NavLink>
+            <NavLink to='contact' data-replace='contact'><span>contact</span></NavLink>
         </nav>
     );
 };

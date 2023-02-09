@@ -7,13 +7,13 @@ const MainNav = () => {
         <nav className={classes['main-nav']}>
             <ul className={classes['main-nav__links']}>
                 <li className={classes['main-nav__link']}>
-                    <NavLink to='about'>about me</NavLink>
+                    <NavLink to='about' data-replace='about me'><span>about me</span></NavLink>
                 </li>
                 <li className={classes['main-nav__link']}>
-                    <NavLink to='portfolio'>portfolio</NavLink>
+                    <NavLink to='portfolio' data-replace='portfolio'><span>portfolio</span></NavLink>
                 </li>
                 <li className={classes['main-nav__link']}>
-                    <NavLink to='contact'>contact</NavLink>
+                    <NavLink to='contact' data-replace='contact'><span>contact</span></NavLink>
                 </li>
             </ul>
         </nav>
