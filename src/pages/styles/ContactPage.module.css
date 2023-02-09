@@ -1,16 +1,17 @@
-.about-page {
+.contact-page {
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: calc(100vh - 18rem);
+    position: relative;
 }
 
-.about-page h1 {
+.contact-page h1 {
     text-align: center;
     font-size: 3rem;
+    color: #C36F09;
 }
 
 .contact-list {
@@ -25,24 +26,63 @@
 }
 
 .contact-list__item {
-    /* display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center; */
     font-size: 3rem;
     margin: 0 1rem;
-    
 }
 
 .contact-list__item a {
     text-decoration: none;
-    color: inherit;
+    color: #C36F09;
 }
 
 .contact-list__item span {
     display: none;
+}
+
+.contact-list__item svg {
+    animation: rotation-reverse 0.5s;
+}
+
+.contact-list__item:hover svg,
+.contact-list__item:active svg {
+    border: 2px dotted #B6244F;
+    border-radius: 50%;
+    transition: font-size 0.5s;
+    animation: rotation 0.5s forwards;
+    padding: 0.2rem;
+}
+
+.animation__circle {
+    border-radius: 50%;
+    border: 2px dotted #B6244F;
+    position: absolute;
+    z-index: -1;
+}
+
+.animation__circle:first-of-type {
+    width: 5rem;
+    height: 5rem;
+    border-width: 5px;
+    top: -3rem;
+    left: -2rem;
+    animation: rotation-bg 8s infinite linear;
+}
+
+.animation__circle:nth-of-type(2) {
+    width: 6rem;
+    height: 6rem;
+    top: 13rem;
+    right: -3.5rem;
+    animation: rotation-bg 13s reverse infinite linear;
+}
+
+.animation__circle:last-of-type {
+    width: 8rem;
+    height: 8rem;
+    top: 20rem;
+    left: -3rem;
+    border-width: 8px;
+    animation: rotation-bg 10s infinite linear;
 }
 
 @media (min-width: 481px) {
@@ -76,6 +116,9 @@
 }
 
 @media (min-width: 769px) {
+    .contact-page {
+        margin-top: 2rem;
+    }
     .contact-list {
          width: 60%;
          margin: 0 auto;
@@ -93,5 +136,57 @@
 
     .contact-list__item svg {
         font-size: 2.5rem;
+    }
+
+    .animation__circle:first-of-type {
+        width: 9rem;
+        height: 9rem;
+        top: -5rem;
+        left: -3rem;
+    }
+
+    .animation__circle:nth-of-type(2) {
+        width: 11rem;
+        height: 11rem;
+    }
+
+    .animation__circle:last-of-type {
+        width: 13rem;
+        height: 13rem;
+        top: 22rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .animation__circle:nth-of-type(2) {
+        top: 7rem;
+    }
+
+    .animation__circle:last-of-type {
+        top: 15rem;
+    }
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg) scale(1);
+    } to {
+        transform: rotate(359deg) scale(3);
+    }
+}
+
+@keyframes rotation-reverse {
+    from {
+        transform: rotate(359deg) scale(3);
+    } to {
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+@keyframes rotation-bg {
+    from {
+        transform: rotate(0deg);
+    } to {
+        transform: rotate(359deg);
     }
 }

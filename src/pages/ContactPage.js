@@ -1,23 +1,23 @@
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
-import { ImMail } from 'react-icons/im';
+import { FaGithub } from 'react-icons/fa';
+import { ImMail4 } from 'react-icons/im';
+import { TiSocialLinkedinCircular } from 'react-icons/ti';
 
 import classes from './styles/ContactPage.module.css';
 
 const ContactPage = () => {
     return (
-        <div className={classes['about-page']}>
+        <div className={classes['contact-page']}>
             <h1>contact</h1>
-            <div className={classes['contact-list__container']}>
                 <ul className={classes['contact-list']}>
                     <li className={classes['contact-list__item']}>
                         <a href='mailto:patrycjagadkowska@gmail.com'>
-                            <ImMail />
+                            <ImMail4 />
                         </a>
                         <span>patrycjagadkowska@gmail.com</span>
                     </li>
                     <li className={classes['contact-list__item']}>
                         <a href='https://linkedin.com'>
-                            <FaLinkedin />
+                            <TiSocialLinkedinCircular />
                         </a>
                         <span>LinkedIn</span>
                     </li>
@@ -28,7 +28,9 @@ const ContactPage = () => {
                         <span>GitHub</span>
                     </li>
                 </ul>
-            </div>
+                <div className={classes['animation__circle']} />
+                <div className={classes['animation__circle']} />
+                <div className={classes['animation__circle']} />
         </div>
     );
 };
