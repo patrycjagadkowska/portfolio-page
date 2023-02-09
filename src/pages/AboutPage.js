@@ -20,6 +20,9 @@ const AboutPage = () => {
                 <h2 className={classes['about-page__header']}>my tools</h2>
                 <ToolsList />
             </section>
+            <div className={classes['animation__circle']} />
+            <div className={classes['animation__circle']} />
+            <div className={classes['animation__circle']} />
         </div>
     );
 };

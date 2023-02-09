@@ -1,7 +1,94 @@
+.about-page {
+    position: relative;
+    margin-bottom: 7rem;
+}
+
 .about-page__header {
     text-align: center;
+    color: #C36F09;
 }
 
 .about-page__section--about {
     text-align: justify;
+    width: 90%;
+    margin: 0 auto;
+    line-height: 150%;
+}
+
+.about-page__section--about .about-page__header {
+    margin-top: 0;
+}
+
+.animation__circle {
+    border-radius: 50%;
+    border: 2px dotted #B6244F;
+    position: absolute;
+    z-index: -1;
+}
+
+.animation__circle:first-of-type {
+    width: 5rem;
+    height: 5rem;
+    border-width: 5px;
+    top: -3rem;
+    left: -2rem;
+    animation: rotation 8s infinite linear;
+}
+
+.animation__circle:nth-of-type(2) {
+    width: 6rem;
+    height: 6rem;
+    top: 13rem;
+    right: -3.5rem;
+    animation: rotation 5s reverse infinite linear;
+}
+
+.animation__circle:last-of-type {
+    width: 8rem;
+    height: 8rem;
+    top: 25rem;
+    left: -3rem;
+    border-width: 8px;
+    animation: rotation 10s infinite linear;
+}
+
+@media (max-width: 335px) {
+    .animation__circle:nth-of-type(2) {
+        right: -5.5rem;
+    }
+
+    .animation__circle:last-of-type {
+        left: -5rem;
+    }
+}
+
+@media (min-width: 481px) {
+    .animation__circle:last-of-type {
+        top: 20rem;
+        left: -5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .about-page__section--about {
+        margin-top: 2rem;
+    }
+
+    .animation__circle:first-of-type {
+        width: 7rem;
+        height: 7rem;
+        top: -5rem;
+    }
+
+    .animation__circle:last-of-type {
+        top: 20rem;
+    }
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    } to {
+        transform: rotate(359deg);
+    }
 }
