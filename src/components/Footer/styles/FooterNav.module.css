@@ -27,12 +27,20 @@
 .footer-nav__main-nav--link,
 .footer-nav__link {
     padding: 0.2rem 0;
+    transition: all 0.3s ease-in-out;
 }
 
 .footer-nav__main-nav--link a,
 .footer-nav__link a {
     text-decoration: none;
     color: #212738;
+}
+
+.footer-nav__main-nav--link:hover,
+.footer-nav__main-nav--link:active,
+.footer-nav__link:hover,
+.footer-nav__link:active {
+    transform: scale(2);
 }
 
 @media (min-width: 769px) {
