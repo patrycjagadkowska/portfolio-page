@@ -1,33 +1,60 @@
-import { Link, NavLink } from "react-router-dom"
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { useState, useEffect, useMemo } from "react";
 
-import classes from './styles/FooterNav.module.css';
+import FooterNavLink from "./FooterNavLink";
+import FooterLink from "./FooterLink";
+
+import classes from "./styles/FooterNav.module.css";
 
 const FooterNav = () => {
-    return (
-        <nav className={classes['footer-nav']}>
-            <ul className={classes['footer-nav__main-nav']}>
-                <li className={classes['footer-nav__main-nav--link']}>
-                    <NavLink to='/'>home</NavLink>
-                </li>
-                <li className={classes['footer-nav__main-nav--link']}>
-                    <NavLink to='contact'>contact</NavLink>
-                </li>
-            </ul>
-            <ul className={classes['footer-nav__links']}>
-                <li className={classes['footer-nav__link']}>
-                    <Link to='https://github.com'>
-                        <FaGithub />
-                    </Link>
-                </li>
-                <li className={classes['footer-nav__link']}>
-                    <Link to='https://linkedin.com'>
-                        <FaLinkedin />
-                    </Link>
-                </li>
-            </ul>
-        </nav>
-    );
+  const [mainNav, setMainNav] = useState([]);
+  const [iconsNav, setIconsNav] = useState([]);
+
+  const mainNavList = useMemo(() => {
+    return [
+      { path: "/", title: "home" },
+      { path: "/about", title: "about" },
+      { path: "/portfolio", title: "portfolio" },
+      { path: "/contact", title: "contact" },
+    ];
+  }, []);
+
+  const iconsNavList = useMemo(() => {
+    return [
+      { path: "https://github.com", title: <FaGithub /> },
+      { path: "http://linkedin.com", title: <FaLinkedin /> },
+    ];
+  }, []);
+
+  useEffect(() => {
+    const mappedMainNav = mainNavList.map((item, index) => {
+      return (
+        <FooterNavLink
+          path={item.path}
+          title={item.title}
+          key={`footernavlink${index}`}
+        />
+      );
+    });
+    const mappedIconsNav = iconsNavList.map((item, index) => {
+      return (
+        <FooterLink
+          path={item.path}
+          title={item.title}
+          key={`footericonlink${index}`}
+        />
+      );
+    });
+    setMainNav(mappedMainNav);
+    setIconsNav(mappedIconsNav);
+  }, [mainNavList, iconsNavList, setMainNav, setIconsNav]);
+
+  return (
+    <nav className={classes["footer-nav"]}>
+      <ul className={classes["footer-nav__main-nav"]}>{mainNav}</ul>
+      <ul className={classes["footer-nav__links"]}>{iconsNav}</ul>
+    </nav>
+  );
 };
 
 export default FooterNav;

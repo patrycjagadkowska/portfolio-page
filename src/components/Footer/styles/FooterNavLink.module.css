@@ -1,0 +1,14 @@
+.footer-nav-link {
+    padding: 0.2rem 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.footer-nav-link a {
+    text-decoration: none;
+    color: #212738;
+}
+
+.footer-nav-link:hover,
+.footer-nav-link:active {
+    transform: scale(2);
+}
