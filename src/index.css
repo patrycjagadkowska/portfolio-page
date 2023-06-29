@@ -2,9 +2,16 @@
   box-sizing: border-box;
 }
 
+html {
+   height: 100%;
+}
+
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
   background: #212738;
   color: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }

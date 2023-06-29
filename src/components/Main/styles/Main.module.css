@@ -3,4 +3,5 @@
     position: relative;
     overflow: hidden;
     min-height: 80vh;
+    flex: 1;
 }
