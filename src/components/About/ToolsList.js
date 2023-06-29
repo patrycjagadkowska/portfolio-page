@@ -1,25 +1,32 @@
-import { FaGitAlt, FaGithub } from 'react-icons/fa';
-import { SiVisualstudiocode } from 'react-icons/si';
+import { FaGitAlt, FaGithub } from "react-icons/fa";
+import { SiVisualstudiocode } from "react-icons/si";
+import { useState, useEffect, useMemo } from "react";
 
-import classes from './styles/AboutLists.module.css';
+import ListItem from "./ListItem";
+
+import classes from "./styles/AboutLists.module.css";
 
 const ToolsList = () => {
-    return (
-        <ul className={classes['icons-list']}>
-            <li className={classes['icons-list__icon']}>
-                <FaGitAlt />
-                <h3>Git</h3>
-            </li>
-            <li className={classes['icons-list__icon']}>
-                <FaGithub />
-                <h3>GitHub</h3>
-            </li>
-            <li className={classes['icons-list__icon']}>
-                <SiVisualstudiocode />
-                <h3>Visual Studio Code</h3> 
-            </li>
-        </ul>
-    );
+  const [itemsList, setItemsList] = useState([]);
+
+  const toolsList = useMemo(() => {
+    return [
+      { icon: <FaGitAlt />, title: "Git" },
+      { icon: <FaGithub />, title: "Github" },
+      { icon: <SiVisualstudiocode />, title: "Visual Studio Code" },
+    ];
+  }, []);
+
+  useEffect(() => {
+    const mappedArray = toolsList.map((item, index) => {
+      return (
+        <ListItem icon={item.icon} title={item.title} key={`tool${index}`} />
+      );
+    });
+    setItemsList(mappedArray);
+  }, [toolsList, setItemsList]);
+
+  return <ul className={classes["icons-list"]}>{itemsList}</ul>;
 };
 
 export default ToolsList;
