@@ -10,6 +10,9 @@ const PortfolioPage = () => {
                 <Project />
                 <Project />
             </div>
+            <div className={classes['animation__circle']} />
+            <div className={classes['animation__circle']} />
+            <div className={classes['animation__circle']} />
         </div>
     );
 };

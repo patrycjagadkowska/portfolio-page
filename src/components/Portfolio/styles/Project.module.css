@@ -9,12 +9,24 @@
     overflow: hidden;
     margin: 0.5rem 0;
     position: relative;
+    background: url(../../../assets/portfolio-project.png) center/cover;
+    border: 2px dotted #B6244F;
+    box-shadow: none;
 }
 
-.project:hover .project__header,
-.project:hover .project__skills {
+.project__header,
+.project__skills {
+    transition: all 0.2s ease-in-out;
+}
+
+.project:hover .project__header {
     opacity: 0;
     transform: translateY(-100%);
+}
+
+.project:hover .project__skills {
+    opacity: 0;
+    transform: translateY(100%);
 }
 
 .project:hover .project__actions {
@@ -28,9 +40,11 @@
 }
 
 .project__header {
-    background-color: #B6244F;
+    background-color: #212738;
+    color: #C36F09;
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
+    border-bottom: 2px dotted #B6244F;
 }
 
 .project__header h3 {
@@ -43,7 +57,7 @@
 
 .project__actions {
     opacity: 0;
-    background: #ccc;
+    background: rgba(0, 0, 0, 0.5);
     display: -moz-box;
     display: -webkit-box;
     display: -webkit-flex;
@@ -56,16 +70,22 @@
     color: inherit;
 }
 
+.project__actions--action:hover svg {
+    transform: scale(2);
+}
+
 .project__actions--action svg {
     font-size: 3rem;
     margin: 0 0.5rem;
+    transition: transform 0.3s ease-in-out;
 }
 
 .project__skills {
-    background-color: #FBB7C0;
+    background-color: #212738;
     padding: 1.5rem 0 0.5rem;
     border-top-left-radius: 50%;
     border-top-right-radius: 50%;
+    border-top: 2px dotted #B6244F;
 }
 
 .project__skills--list {
@@ -83,12 +103,19 @@
 }
 
 .project__skills--list li {
-    background-color: #BFADA3;
-    color: #B6244F;
-    border: 2px solid #B6244F;
+    background-color: #212738;
+    color: #C36F09;
+    border: 2px dotted #C36F09;
     border-radius: 15px;
     padding: 0.3rem;
     margin: 0.2rem;
+}
+
+@media (max-width: 330px) {
+    .project {
+        width: 90%;
+        height: 100%;
+    }
 }
 
 @media (min-width: 491px) {
