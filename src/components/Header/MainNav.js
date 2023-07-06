@@ -2,9 +2,9 @@ import { NavLink } from "react-router-dom";
 
 import classes from './styles/MainNav.module.css';
 
-const MainNav = () => {
+const MainNav = ({ openMenu, toggleMenu }) => {
     return (
-        <nav className={classes['main-nav']}>
+        <nav className={`${classes['main-nav']} ${openMenu ? classes.open : ""}`} onClick={toggleMenu}>
             <ul className={classes['main-nav__links']}>
                 <li className={classes['main-nav__link']}>
                     <NavLink to='about' data-replace='about me'><span>about me</span></NavLink>

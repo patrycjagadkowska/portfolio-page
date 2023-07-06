@@ -19,7 +19,7 @@ const Header = () => {
             <div className={classes['header__home']}>
                 <NavLink to='/' data-replace='HOME'><span>HOME</span></NavLink>
             </div>
-            <MainNav />
+            <MainNav openMenu={openMenu} toggleMenu={toggleMenu} />
             <HamburgerButton openMenu={openMenu} toggleMenu={toggleMenu} />
         </header>
         </>

@@ -1,6 +1,6 @@
 .header {
     display: -webkit-box;
-    display: -moz-box;
+    display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
     background: #212738;
@@ -73,58 +73,6 @@
     transform: translate3d(-200%, 0, 0);
 }
 
-.header__toggle-button--background {
-    border-radius: 50%;
-    position: absolute;
-    top: -3.5rem;
-    right: -3.5rem;
-    width: 0;
-    height: 0;
-    background-color: #B6244F;
-    transition: width 0.5s, height 0.5s;
-    z-index: 20;
-}
-
-.header__toggle-button:hover ~ .header__toggle-button--background,
-.header__toggle-button:active ~ .header__toggle-button--background,
-.header__toggle-button:focus ~ .header__toggle-button--background {
-    width: 9rem;
-    height: 9rem;
-}
-
-.header__toggle-button {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -webkit-flex;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: flex-end;
-    width: 2.5rem;
-    height: 2.5rem;
-    margin: 1rem;
-    position: relative;
-    z-index: 21;
-}
-
-.header__toggle-button span {
-    height: 0.2rem;
-    background-color: #C36F09;
-    
-}
-
-.header__toggle-button span:first-child {
-    width: 100%;
-}
-
-.header__toggle-button span:nth-child(2) {
-    width: 60%;
-}
-
-.header__toggle-button span:last-child {
-    width: 30%;
-}
-
 @media (min-width: 769px) {
     .header {
         padding-bottom: 0;
@@ -132,10 +80,5 @@
 
     .header__home {
         border-right: 2px dotted #B6244F;
-    }
-
-    .header__toggle-button, 
-    .header__toggle-button--background {
-        display: none;
     }
 }
