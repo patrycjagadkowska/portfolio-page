@@ -16,13 +16,13 @@ const ContactPage = () => {
           <span>patrycjagadkowska@gmail.com</span>
         </li>
         <li className={classes["contact-list__item"]}>
-          <a href="https://linkedin.com">
+          <a href="https://www.linkedin.com/in/patrycja-gadkowska-600b34154/">
             <TiSocialLinkedinCircular />
           </a>
           <span>LinkedIn</span>
         </li>
         <li className={classes["contact-list__item"]}>
-          <a href="https://github.com">
+          <a href="https://github.com/patrycjagadkowska">
             <FaGithub />
           </a>
           <span>GitHub</span>
