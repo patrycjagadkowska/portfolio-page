@@ -12,7 +12,7 @@ const PortfolioPage = () => {
           header="Portfolio Page"
           description="My personal portfolio page containing my projects and info."
           ghlink="https://github.com/patrycjagadkowska/portfolio-page"
-          demolink="somedomain.com"
+          demolink="https://patrycjagadkowska.netlify.app"
           skills={["HTML", "CSS", "JavaScript", "React", "RWD"]}
           image={require("../assets/portfolio-project.png")}
         />
@@ -20,7 +20,7 @@ const PortfolioPage = () => {
           header="PortuApp"
           description="Demo application to learn portuguese."
           ghlink="https://github.com/patrycjagadkowska/PortuApp"
-          demolink="somedomain.com"
+          demolink="https://portuapp.netlify.app"
           skills={[
             "HTML",
             "CSS",
