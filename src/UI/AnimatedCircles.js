@@ -1,6 +1,6 @@
 import classes from "./styles/AnimatedCircles.module.css";
 
-const AnimatedCircles = ({ className }) => {
+const AnimatedCircles = () => {
   return (
     <div className={classes["animated-circles"]}>
       <div className={classes.circle} />
