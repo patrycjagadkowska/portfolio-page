@@ -11,7 +11,7 @@ const PortfolioPage = () => {
         <Project
           header="Portfolio Page"
           description="My personal portfolio page containing my projects and info."
-          ghlink="https://github.com/patrycjagadkowska"
+          ghlink="https://github.com/patrycjagadkowska/portfolio-page"
           demolink="somedomain.com"
           skills={["HTML", "CSS", "JavaScript", "React", "RWD"]}
           image={require("../assets/portfolio-project.png")}
@@ -32,7 +32,7 @@ const PortfolioPage = () => {
           image={require("../assets/portuapp-project.png")}
         />
       </div>
-      <AnimatedCircles />
+      <AnimatedCircles /> 
     </div>
   );
 };
