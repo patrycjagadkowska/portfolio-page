@@ -29,11 +29,15 @@
 
 .project:hover .project__header {
     opacity: 0;
+    -webkit-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
     transform: translateY(-100%);
 }
 
 .project:hover .project__skills {
     opacity: 0;
+    -webkit-transform: translateY(100%);
+    -ms-transform: translateY(100%);
     transform: translateY(100%);
 }
 
@@ -80,6 +84,8 @@
 }
 
 .project__actions--action:hover svg {
+    -webkit-transform: scale(2);
+    -ms-transform: scale(2);
     transform: scale(2);
 }
 

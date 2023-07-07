@@ -17,6 +17,7 @@
     border-width: 5px;
     top: -3rem;
     left: -2rem;
+    -webkit-animation: rotation 8s infinite linear;
     animation: rotation 8s infinite linear;
 }
 
@@ -25,6 +26,7 @@
     height: 6rem;
     top: 13rem;
     right: -3.5rem;
+    -webkit-animation: rotation 5s reverse infinite linear;
     animation: rotation 5s reverse infinite linear;
 }
 
@@ -34,6 +36,7 @@
     top: 25rem;
     left: -3rem;
     border-width: 8px;
+    -webkit-animation: rotation 10s infinite linear;
     animation: rotation 10s infinite linear;
 }
 
@@ -66,10 +69,26 @@
     }
 }
 
-@keyframes rotation {
+@-webkit-keyframes rotation {
     from {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
         transform: rotate(0deg);
     } to {
+        -webkit-transform: rotate(359deg);
+        -ms-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+
+@keyframes rotation {
+    from {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    } to {
+        -webkit-transform: rotate(359deg);
+        -ms-transform: rotate(359deg);
         transform: rotate(359deg);
     }
 }
