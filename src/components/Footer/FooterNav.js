@@ -21,8 +21,8 @@ const FooterNav = () => {
 
   const iconsNavList = useMemo(() => {
     return [
-      { path: "https://github.com", title: <FaGithub /> },
-      { path: "http://linkedin.com", title: <FaLinkedin /> },
+      { path: "https://github.com/patrycjagadkowska", title: <FaGithub /> },
+      { path: "https://www.linkedin.com/in/patrycja-gadkowska-600b34154/", title: <FaLinkedin /> },
     ];
   }, []);
 

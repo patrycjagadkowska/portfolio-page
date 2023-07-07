@@ -2,8 +2,7 @@ import {
   FaHtml5,
   FaCss3Alt,
   FaReact,
-  FaBootstrap,
-  FaSass,
+  FaBootstrap
 } from "react-icons/fa";
 import { SiJavascript } from "react-icons/si";
 import { FcSmartphoneTablet } from "react-icons/fc";
@@ -23,7 +22,6 @@ const SkillsList = () => {
         { icon: <SiJavascript />, title: "JavaScript" },
         { icon: <FaReact />, title: "React" },
         { icon: <FaBootstrap />, title: "Bootstrap" },
-        { icon: <FaSass />, title: "SASS" },
         { icon: <FcSmartphoneTablet />, title: "RWD" },
       ]
   }, []);
