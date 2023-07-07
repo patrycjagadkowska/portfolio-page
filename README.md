@@ -2,7 +2,7 @@
 
 # Portfolio Page
 
-This project is my personal portfolio created with create-react-app. Soon it will be possible to visit it online.
+This project is my personal portfolio created with create-react-app. <a href="https://patrycjagadkowska.netlify.app">Demo</a> available here!
 
 ## Install 
 git clone https://github.com/patrycjagadkowska/portfolio-page.git
