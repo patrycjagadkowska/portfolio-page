@@ -1,5 +1,6 @@
 import SkillsList from "../components/About/SkillsList";
 import ToolsList from "../components/About/ToolsList";
+import AnimatedCircles from "../UI/AnimatedCircles";
 
 import classes from "./styles/AboutPage.module.css";
 
@@ -21,9 +22,7 @@ const AboutPage = () => {
         <h2 className={classes["about-page__header"]}>my tools</h2>
         <ToolsList />
       </section>
-      <div className={classes["animation__circle"]} />
-      <div className={classes["animation__circle"]} />
-      <div className={classes["animation__circle"]} />
+      <AnimatedCircles />
     </div>
   );
 };

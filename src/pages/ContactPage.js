@@ -2,6 +2,8 @@ import { FaGithub } from "react-icons/fa";
 import { ImMail4 } from "react-icons/im";
 import { TiSocialLinkedinCircular } from "react-icons/ti";
 
+import AnimatedCircles from "../UI/AnimatedCircles";
+
 import classes from "./styles/ContactPage.module.css";
 
 const ContactPage = () => {
@@ -28,9 +30,7 @@ const ContactPage = () => {
           <span>GitHub</span>
         </li>
       </ul>
-      <div className={classes["animation__circle"]} />
-      <div className={classes["animation__circle"]} />
-      <div className={classes["animation__circle"]} />
+      <AnimatedCircles />
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import Project from "../components/Portfolio/Project";
+import AnimatedCircles from "../UI/AnimatedCircles";
 
 import classes from "./styles/PortfolioPage.module.css";
 
@@ -31,9 +32,7 @@ const PortfolioPage = () => {
           image={require("../assets/portuapp-project.png")}
         />
       </div>
-      <div className={classes["animation__circle"]} />
-      <div className={classes["animation__circle"]} />
-      <div className={classes["animation__circle"]} />
+      <AnimatedCircles />
     </div>
   );
 };

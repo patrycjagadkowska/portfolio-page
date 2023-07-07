@@ -1,0 +1,75 @@
+.animated__circles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.circle {
+    border-radius: 50%;
+    border: 2px dotted #B6244F;
+    position: absolute;
+    z-index: -1;
+}
+
+.circle:first-of-type {
+    width: 5rem;
+    height: 5rem;
+    border-width: 5px;
+    top: -3rem;
+    left: -2rem;
+    animation: rotation 8s infinite linear;
+}
+
+.circle:nth-of-type(2) {
+    width: 6rem;
+    height: 6rem;
+    top: 13rem;
+    right: -3.5rem;
+    animation: rotation 5s reverse infinite linear;
+}
+
+.circle:last-of-type {
+    width: 8rem;
+    height: 8rem;
+    top: 25rem;
+    left: -3rem;
+    border-width: 8px;
+    animation: rotation 10s infinite linear;
+}
+
+@media (max-width: 335px) {
+    .circle:nth-of-type(2) {
+        right: -5.5rem;
+    }
+
+    .circle:last-of-type {
+        left: -5rem;
+    }
+}
+
+@media (min-width: 481px) {
+    .circle:last-of-type {
+        top: 20rem;
+        left: -5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .circle:first-of-type {
+        width: 7rem;
+        height: 7rem;
+        top: -5rem;
+    }
+
+    .circle:last-of-type {
+        top: 20rem;
+    }
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    } to {
+        transform: rotate(359deg);
+    }
+}
