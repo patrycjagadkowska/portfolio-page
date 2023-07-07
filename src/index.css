@@ -11,11 +11,11 @@ body {
   font-family: 'Montserrat', sans-serif;
   background: #212738;
   color: white;
-  height: 100%;
+  min-height: 100%;
 }
 
 #root {
-  height: 100%;
+  min-height: 100%;
   display: -ms-flexbox;
   display: -webkit-box;
   display: -webkit-flex;
