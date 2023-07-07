@@ -30,7 +30,6 @@
 
 .main-nav__link {
     padding: 1.3rem;
-    width: 33%;
     text-align: center;
 }
 
@@ -100,6 +99,10 @@
     .main-nav__links {
         -ms-flex-direction: row;
         flex-direction: row;
+    }
+
+    .main-nav__link {
+        width: 33%;
     }
 
     .main-nav__link a {
